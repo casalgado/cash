@@ -1,0 +1,44 @@
+
+#title {
+	margin-top: 25px;
+	text-align: center;
+}
+
+.container {
+	width: 930px;
+	margin: 0 auto;
+}
+
+.container p {
+	text-align: center; 
+}
+
+.square {
+	width: 300px;
+	height: 300px;
+	border: 1px solid black;
+	float: left;
+	margin: 4px;
+	text-align: center;
+	line-height: 300px;
+	font-size: 300%;
+	background-position: center top;
+  background-size: 100% auto;
+  margin-top: 150px;
+}
+
+#sq1:hover {
+	background-image: url("/images/test-01.png");
+}
+
+#sq2:hover {
+	background-image: url("/images/test-02.png");
+}
+
+#sq3:hover {
+	background-image: url("/images/test-03.png");
+}
+
+.selected {
+	margin-top: 10px !important;
+}
