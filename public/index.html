@@ -1,7 +1,7 @@
 
 <head>
 <link rel="stylesheet" type="text/css" href="css/index.css">
-<link rel="javascript" type="text/javascript" href="js/index.js">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
 
 <h1 id="title"> Hello Alex! </h1>
@@ -14,26 +14,11 @@
 </div>
 <p id="response">   </p>
 
-<script type="text/javascript"> document.getElementById("sq1").addEventListener("click", function(){
-    document.getElementById("sq1").classList.remove("selected");
-    document.getElementById("sq2").classList.remove("selected");
-    document.getElementById("sq3").classList.remove("selected");
-    this.classList.add("selected");
-    document.getElementById("response").innerHTML = "Good Choice!";
-}); </script>
+<script src="js/index.js"></script>
 
-<script type="text/javascript"> document.getElementById("sq2").addEventListener("click", function(){
-    document.getElementById("sq1").classList.remove("selected");
-    document.getElementById("sq2").classList.remove("selected");
-    document.getElementById("sq3").classList.remove("selected");
-    this.classList.add("selected");
-    document.getElementById("response").innerHTML = "I hope they have mint";
-}); </script>
 
-<script type="text/javascript"> document.getElementById("sq3").addEventListener("click", function(){
-    document.getElementById("sq1").classList.remove("selected");
-    document.getElementById("sq2").classList.remove("selected");
-    document.getElementById("sq3").classList.remove("selected");
-    this.classList.add("selected");
-    document.getElementById("response").innerHTML = "Proceed at your own Risk";
-}); </script>
+
+
+
+
+
