@@ -1,0 +1,15 @@
+.chart {
+	position: absolute;
+	top: 100px;
+	left: 200px;
+}
+
+.chart rect {
+  fill: steelblue;
+}
+
+.chart text {
+  fill: white;
+  font: 10px sans-serif;
+  text-anchor: end;
+}

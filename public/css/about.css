@@ -1,0 +1,18 @@
+
+
+#car {
+	width: 240px;
+	height: 126px;
+	margin-left: 10px;
+	text-align: center;
+	line-height: 62px;
+}
+
+.example_block {
+	position: absolute;
+	top: 200px;
+	width: 48px;
+	height: 48px;
+	text-align: center;
+	line-height: 62px;
+}

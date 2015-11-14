@@ -1,10 +1,13 @@
 
 
-
 var ready = function() {
 
 	$(document).ready(function() {
+		$('[data-toggle="tooltip"]').tooltip({
+			delay: { "show": 200, "hide": 100 }
+		})
 	  	$(".square").on("click", function() {
+	  		$(this).tooltip('hide')
 	  		$(".square").removeClass("selected")
 	  			$(this).addClass("selected")
 
