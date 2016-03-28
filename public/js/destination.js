@@ -4,7 +4,7 @@ function Colour(){this.getIntegerRGB=function(){var a=this.getRGB();return{r:Mat
 
 // Create snap environment with background
 
-  var s = Snap("#svg").attr("cursor", "-webkit-grab") // environment
+  var s = Snap("#svg") // environment
   var image = s.image("images/roundworld.svg", 0, 0, 1170, 600) // background
 
 // Global Variable Declarations
