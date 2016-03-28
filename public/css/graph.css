@@ -1,7 +1,7 @@
 .chart {
-	position: absolute;
-	top: 100px;
-	left: 200px;
+	position: relative;
+	top: 0px;
+	left: 0px;
 }
 
 .chart text {
@@ -30,4 +30,8 @@
 
 .x.axis path {
   display: none;
+}
+
+.graph-container {
+  height: 500px;
 }

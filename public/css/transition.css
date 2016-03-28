@@ -1,9 +1,16 @@
 
-.box {
-	position: absolute;
-	left: 200px;
-	top: 100px;
-	border: 1px solid black;
-	width: 1000px;
-	height: 618px;
+.destination-container {
+	width:1170px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+#svg {
+	width:1170px;
+	height: 600px;
+	margin: 0 auto;
+}
+
+.destination-background {
+	background: black
 }
