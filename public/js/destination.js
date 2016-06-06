@@ -122,14 +122,15 @@ var Destination = function(city, country, month, year, duration, latitude, longi
     }, animation)
   }
 
-  function heat_scale(number, limit, max){ // not yet implemented
+  function heat_scale(number, limit, max){ 
     if (number > 100) {
       number = ((number/max) + 1) * 45
     }
     return (number/270) * limit
   }
 
-  function color_by_duration(item, animation){
+  function color_by_duration(item, animation){ // This was the prefered way because of how the colors look.
+    
     var duration = item.duration
     var multiplier = Math.floor(duration / 100)
     var scale = Math.max(0, (duration - duration*multiplier))
@@ -142,6 +143,28 @@ var Destination = function(city, country, month, year, duration, latitude, longi
       r: 8
     }, animation)
   }
+
+
+  // This is another way of doing it. 
+  // yes... I know... its ugly, but: http://stackoverflow.com/questions/6665997/switch-statement-for-greater-than-less-than
+  
+  function alternative_color_by_duration(item, animation){ 
+    duration = item.duration
+    scheme = ['#fd6420','#feb12a','#f0fe37','#35e563','#22c4fd','#126afc']
+    if (duration < 3)   { color = scheme[5] } else
+    if (duration < 8)   { color = scheme[4] } else
+    if (duration < 20)  { color = scheme[3] } else
+    if (duration < 60)  { color = scheme[2] } else
+    if (duration < 180) { color = scheme[1] } else
+                        { color = scheme[0] } 
+    item.artwork.animate({
+      fill: color,
+      r: 8
+    }, animation)
+  }
+
+
+
 
 
 // Show size relative to time
