@@ -24,7 +24,7 @@ function Colour(){this.getIntegerRGB=function(){var a=this.getRGB();return{r:Mat
 
 // Constructor for a Destination object from city data
 
-var Destination = function(city, country, month, year, duration, latitude, longitude) {
+var Destination = function(city, country, month, year, duration, latitude, longitude, notes) {
     this.city = city;
     this.country = country;
     this.month =  month;
@@ -32,6 +32,7 @@ var Destination = function(city, country, month, year, duration, latitude, longi
     this.duration =  duration;
     this.latitude  = parseInt(latitude);
     this.longitude = parseInt(longitude);
+    this.notes = notes;
     this.artwork = s.circle(longitude, latitude, default_radius).attr({ fill: default_color })
 };
 
@@ -135,7 +136,6 @@ var Destination = function(city, country, month, year, duration, latitude, longi
     var result = scale > 0 ? scale :  Math.floor((multiplier/7 + 1) * 45);
     var scaled = ((result/80) * 210)
     var test = heat_scale(item.duration, 730, 210)
-    console.log(scaled + " : " + test) 
     color = new HSVColour(230 - scaled, 100, 100).getCSSIntegerRGB()
     item.artwork.animate({
       fill: color,
@@ -173,11 +173,14 @@ var Destination = function(city, country, month, year, duration, latitude, longi
 
 // Let the fun begin.
 
-  
+// First, use Papaparse to load data from remote csv file
+// All other functionality will be inside this function
 
-  var destinations = createObjects(CITY_DATA)
+Papa.parse("https://dl.dropboxusercontent.com/u/34948257/city_data.csv", {
+  download: true,
+  complete: function(results) {
 
-// Work Area
+  var destinations = createObjects(results.data)
 
   var black_font = { fontFamily: "Inconsolata", cursor: "pointer", fontSize: "12", fill: "black" }
   var light_font = { fontFamily: "Inconsolata", cursor: "pointer", fontSize: "12", fill: "lightgray" }
@@ -457,12 +460,15 @@ var Destination = function(city, country, month, year, duration, latitude, longi
     popup_text_1.attr({
       text: "City: " + this.city + ", " + this.country
     })
-    popup_text_2.attr({
-      text: "Duration of visit: " + this.duration + " days"
-    })
-
-
-    
+    if (this.city == "Barranquilla"){
+      popup_text_2.attr({
+        text: "Hometown"
+      })
+    } else {
+      popup_text_2.attr({
+        text: "Duration of visit: " + this.duration + " days"
+      })
+    }
   }
 
   var hov_out = function(){
@@ -477,7 +483,11 @@ var Destination = function(city, country, month, year, duration, latitude, longi
 
 
 
-destinations.map(function(item){
-  item.artwork.hover(hov_in.bind(item), hov_out)
-})
+  destinations.map(function(item){
+    item.artwork.hover(hov_in.bind(item), hov_out)
+  })
+
+
+  }
+});
 
