@@ -2,32 +2,83 @@
 <html lang="en">
 
 <head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<script src="js/layouts/load_on_head.js"></script>
 	<link rel="stylesheet" type="text/css" href="css/index.css">
+	<link rel="stylesheet" type="text/css" href="css/modal.css">
 </head>
 <body>
 	<script src="js/layouts/load_navigation.js"></script>
 
 	<!-- HOME -->
 	<section id="home" class="module-hero module-parallax module-fade bg-dark-30" data-background="images/smiling.jpg">
-
 		<div class="hs-caption container">
 			<div class="caption-content">
 				<div class="hs-title-size-4 font-alt m-b-30">
 					Carlos Alberto Salgado
 				</div>
 				<div class="hs-title-size-1 font-inc">
-					Welcome to my web Curriculum Vitae. Scroll to learn more about myself.
+					Bienvenido a mi Curriculum Vitae 
 				</div>
 			</div>
 		</div>
-
 	</section >
 	<!-- /HOME -->
 
-	<!-- WRAPPER -->
+
 	<div class="wrapper">
 
+		<!-- Intro -->
+		<section class="module-small">
+			<div class="container">
+				<div class="row">
+
+				  <div class="col-md-12 cv-header">
+
+				  	<h2 class="title"> QUIEN SOY </h2>
+				  	<h6 class="subtitle"> ADMINISTRADOR DE LA EDUCACION SUPERIOR </h6>
+				  	<p class="description title-desc"> High mobility intercultural program covering management of higher education institutions from the perspectives of policy, research governance, quality, funding, culture and society. </p>
+
+				  </div>
+				</div>
+
+				<div class="row">
+
+				 	<div class="col-md-4 cv-body">
+
+					  	<h6 class="column-title"> 
+					  		<span class="glyphicon glyphicon-education column-title-icon" aria-hidden="true"></span> <span class="" >&nbsp&nbsp EDUCATION</span> 
+					  	</h6>
+				
+						<p class="descriptions column-desc"> High mobility intercultural program covering management of higher education institutions from the perspectives of policy, research governance, quality, funding, culture and society. </p>
+
+				  	</div>
+
+				  	<div class="col-md-4 cv-body">
+
+					  	<h6 class="column-title"> 
+					  		<span class="glyphicon glyphicon-briefcase column-title-icon" aria-hidden="true"></span> <span class="" >&nbsp&nbsp WORK EXPERIENCE</span> 
+					  	</h6>				  	
+
+						<p class="descriptions column-desc"> Interpreted the needs of the employer in order to re-design and develop their website. The core idea of the re-design was to better understand and engage the users of the site: researchers, academics, students and university leadership. </p>
+
+					</div>
+
+					<div class="col-md-4 cv-body">
+
+						<h6 class="column-title"> 
+					  		<span class="glyphicon glyphicon-calendar column-title-icon" aria-hidden="true"></span> <span class="" >&nbsp&nbsp PROJECTS</span> 
+					  	</h6>					  	
+
+					  	<p class="descriptions column-desc"> Co-founder of 'Rotate the Knowledge'. Received book donations and gave them to public libraries in our department. We have given out more than 2000 books </p>			  
+				  	</div>
+			    </div>
+			</div>
+		</div>
+		</section>
+		<!-- /Intro -->
+		
 		<!-- PORTFOLIO -->
 		<section class="module-small p-t-20 p-b-0 p-t-sm-0">
 
@@ -52,18 +103,22 @@
 			</div>
 
 			<!-- PORTFOLIO LIST -->
-			<ul id="works-grid" class="works-grid works-grid-masonry works-grid-3 works-hover-w">
+			<ul id="works-grid" class="works-grid works-grid-masonry works-grid-4 works-hover-w">
 
 				<!-- PORTFOLIO ITEM -->
 				<li class="work-item education ">
-					<a href="portfolio-single-1.html">
+					<a  class="modal-button" 
+						data-toggle="modal" 
+						data-target="#myModal" 
+						data-itemindex="0">
 						<div class="work-image">
-							<img src="images/marihe.jpg" alt="">
+							<img src="images/port-01.png" alt="">
+							<h5 class="column-title port-text"> posgrado </h5>
 						</div>
+
 						<div class="work-caption">
-							<h3 class="work-title font-alt">Higher Education Manager</h3>
+							<h3 class="work-title font-alt">Administrador de la Educacion Superior</h3>
 							<div class="work-descr font-inc">
-								Erasmus Plus Master
 							</div>
 						</div>
 					</a>
@@ -72,14 +127,17 @@
 
 				<!-- PORTFOLIO ITEM -->
 				<li class="work-item skills">
-					<a href="portfolio-single-1.html">
+					<a class="modal-button" 
+						data-toggle="modal" 
+						data-target="#myModal"
+						data-itemindex="1">
 						<div class="work-image">
-							<img src="images/webdesign.jpg" alt="">
+							<img src="images/port-02.png" alt="">
+							<h5 class="column-title port-text"> pregrado </h5>
 						</div>
 						<div class="work-caption">
-							<h3 class="work-title font-alt">Web Design</h3>
+							<h3 class="work-title font-alt">Dise&Ntildeador Industrial</h3>
 							<div class="work-descr font-inc">
-								ruby on rails, html, css, js
 							</div>
 						</div>
 					</a>
@@ -88,9 +146,13 @@
 
 				<!-- PORTFOLIO ITEM -->
 				<li class="work-item education">
-					<a href="portfolio-single-1.html">
+					<a  class="modal-button" 
+						data-toggle="modal" 
+						data-target="#myModal"
+						data-itemindex="1">
 						<div class="work-image">
-							<img src="images/uninorte.jpg" alt="">
+							<img src="images/port-03.png" alt="">
+							<h5 class="column-title port-text"> 3</h5>
 						</div>
 						<div class="work-caption">
 							<h3 class="work-title font-alt">Industrial Designer</h3>
@@ -104,9 +166,13 @@
 
 				<!-- PORTFOLIO ITEM -->
 				<li class="work-item experience">
-					<a href="portfolio-single-1.html">
+					<a  class="modal-button" 
+						data-toggle="modal" 
+						data-target="#myModal"
+						data-itemindex="3">
 						<div class="work-image">
-							<img src="images/lci.jpg" alt="">
+							<img src="images/port-04.png" alt="">
+							<h5 class="column-title port-text"> 4</h5>
 						</div>
 						<div class="work-caption">
 							<h3 class="work-title font-alt">College Lecturer</h3>
@@ -120,9 +186,13 @@
 
 				<!-- PORTFOLIO ITEM -->
 				<li class="work-item skills">
-					<a href="portfolio-single-1.html">
+					<a  class="modal-button" 
+						data-toggle="modal" 
+						data-target="#myModal"
+						data-itemindex="7">
 						<div class="work-image">
-							<img src="images/3dmod.jpg" alt="">
+							<img src="images/port-05.png" alt="">
+							<h5 class="column-title port-text"> 5</h5>
 						</div>
 						<div class="work-caption">
 							<h3 class="work-title font-alt">3d modelling</h3>
@@ -136,9 +206,13 @@
 
 				<!-- PORTFOLIO ITEM -->
 				<li class="work-item projects">
-					<a href="portfolio-single-1.html">
+					<a  class="modal-button" 
+						data-toggle="modal" 
+						data-target="#myModal"
+						data-itemindex="4">
 						<div class="work-image">
-							<img src="images/rotalo.jpg" alt="">
+							<img src="images/port-06.png" alt="">
+							<h5 class="column-title port-text"> 6</h5>
 						</div>
 						<div class="work-caption">
 							<h3 class="work-title font-alt">rota el conocimiento</h3>
@@ -152,9 +226,98 @@
 
 				<!-- PORTFOLIO ITEM -->
 				<li class="work-item education">
+					<a  class="modal-button" 
+						data-toggle="modal" 
+						data-target="#myModal"
+						data-itemindex="9">
+						<div class="work-image">
+							<img src="images/port-07.png" alt="">
+							<h5 class="column-title port-text"> 7</h5>
+						</div>
+						<div class="work-caption">
+							<h3 class="work-title font-alt">Pure Mathematics</h3>
+							<div class="work-descr font-inc">
+								...
+							</div>
+						</div>
+					</a>
+				</li>
+				<!-- /PORTFOLIO ITEM -->
+
+				<!-- PORTFOLIO ITEM -->
+				<li class="work-item education">
 					<a href="portfolio-single-1.html">
 						<div class="work-image">
-							<img src="images/uniandes.jpg" alt="">
+							<img src="images/port-08.png" alt="">
+							<h5 class="column-title port-text"> 8</h5>
+						</div>
+						<div class="work-caption">
+							<h3 class="work-title font-alt">Pure Mathematics</h3>
+							<div class="work-descr font-inc">
+								...
+							</div>
+						</div>
+					</a>
+				</li>
+				<!-- /PORTFOLIO ITEM -->
+
+				<!-- PORTFOLIO ITEM -->
+				<li class="work-item education">
+					<a href="portfolio-single-1.html">
+						<div class="work-image">
+							<img src="images/port-09.png" alt="">
+							<h5 class="column-title port-text"> 9</h5>
+						</div>
+						<div class="work-caption">
+							<h3 class="work-title font-alt">Pure Mathematics</h3>
+							<div class="work-descr font-inc">
+								...
+							</div>
+						</div>
+					</a>
+				</li>
+				<!-- /PORTFOLIO ITEM -->
+
+				<!-- PORTFOLIO ITEM -->
+				<li class="work-item education">
+					<a href="portfolio-single-1.html">
+						<div class="work-image">
+							<img src="images/port-10.png" alt="">
+							<h5 class="column-title port-text"> 10</h5>
+						</div>
+						<div class="work-caption">
+							<h3 class="work-title font-alt">Pure Mathematics</h3>
+							<div class="work-descr font-inc">
+								...
+							</div>
+						</div>
+					</a>
+				</li>
+				<!-- /PORTFOLIO ITEM -->
+
+				<!-- PORTFOLIO ITEM -->
+				<li class="work-item education">
+					<a href="portfolio-single-1.html">
+						<div class="work-image">
+							<img src="images/port-11.png" alt="">
+							<h5 class="column-title port-text"> 11</h5>
+						</div>
+						<div class="work-caption">
+							<h3 class="work-title font-alt">Pure Mathematics</h3>
+							<div class="work-descr font-inc">
+								...
+							</div>
+						</div>
+					</a>
+				</li>
+				<!-- /PORTFOLIO ITEM -->
+
+				<!-- PORTFOLIO ITEM -->
+				<li class="work-item education">
+					<a href="portfolio-single-1.html">
+						<div class="work-image">
+							<img src="images/port-12.png" alt="">
+							<h5 class="column-title port-text"> 12</h5>
 						</div>
 						<div class="work-caption">
 							<h3 class="work-title font-alt">Pure Mathematics</h3>
@@ -168,125 +331,13 @@
 
 			</ul>
 			<!-- /PORTFOLIO LIST -->
-
 		</section>
 		<!-- /PORTFOLIO -->
 
-		<!-- TESTIMONIAL -->
-		<section class="module-small">
 
-			<div class="container">
 
-				<div class="row">
-
-					<!-- MODULE TITLE -->
-					<div class="col-sm-6">
-						<h2 class="module-title font-alt">Someone quote</h2>
-					</div>
-					<!-- /MODULE TITLE -->
-
-					<!-- BLOCKQUOTE -->
-					<div class="col-sm-6">
-						<blockquote class="font-serif align-right">
-							<p>The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.</p>
-							<p class="font-inc font-uppercase">- Thomas Anderson</p>
-						</blockquote>
-					</div>
-					<!-- /BLOCKQUOTE -->
-
-				</div>
-
-			</div>
-
-		</section>
-		<!-- /TESTIMONIAL -->
-
-		<!-- ABOUT -->
-		<section class="module p-t-0 p-b-0" data-background="assets/images/section-4.jpg">
-
-			<div class="container-fluid">
-
-				<div class="row relative">
-
-					<div class="col-sm-12 col-md-6 col-md-offset-6 col-bg">
-
-						<h2 class="module-title font-alt">About</h2>
-
-						<div class="module-subtitle font-inc">
-							Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
-						</div>
-
-						<p>The languages only differ in their grammar, their pronunciation and their most common words. Everyone realizes why a new common language would be desirable: one could refuse to pay expensive translators.</p>
-
-						<p>To achieve this, it would be necessary to have uniform grammar, pronunciation and more common words. If several languages coalesce, the grammar of the resulting language is more simple and regular than that of the individual languages.</p>
-
-						<ul class="social-list">
-							<li><a href="#"><span class="icon-facebook"></span></a></li>
-							<li><a href="#"><span class="icon-twitter"></span></a></li>
-							<li><a href="#"><span class="icon-googleplus"></span></a></li>
-						</ul>
-
-					</div>
-
-				</div>
-
-			</div>
-
-		</section>
-		<!-- /ABOUT -->
-
-		<!-- CONTACT -->
-		<section class="module-small">
 		
-			<div class="container">
-		
-				<div class="row">
-		
-					<!-- CONTENT BOX -->
-					<div class="col-sm-4">
-						<div class="content-box">
-							<div class="content-box-icon">
-								<span class="icon-map-pin"></span>
-							</div>
-							<div class="content-box-title font-inc">
-								007 Steet, City, USA
-							</div>
-						</div>
-					</div>
-					<!-- /CONTENT BOX -->
-		
-					<!-- CONTENT BOX -->
-					<div class="col-sm-4">
-						<div class="content-box">
-							<div class="content-box-icon">
-								<span class="icon-phone"></span>
-							</div>
-							<div class="content-box-title font-inc">
-								+1 234 567 89 00
-							</div>
-						</div>
-					</div>
-					<!-- /CONTENT BOX -->
-		
-					<!-- CONTENT BOX -->
-					<div class="col-sm-4">
-						<div class="content-box">
-							<div class="content-box-icon">
-								<span class="icon-envelope"></span>
-							</div>
-							<div class="content-box-title font-inc">
-								semantic@email.com
-							</div>
-						</div>
-					</div>
-					<!-- /CONTENT BOX -->
-		
-				</div>
-		
-			</div>
-		
-		</section>
-		<!-- /CONTACT -->
+
 
 		<!-- FOOTER -->
 		<footer class="footer">
@@ -307,9 +358,48 @@
 		<!-- /FOOTER -->
 
 	</div>
+
 	<!-- /WRAPPER -->
 
+	<!-- Modal -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel"> </h4>
+	      </div>
+	      <div class="modal-body">
+	        <div class="modal-image-container">
+	        	<img src="images/logo-marihe.jpg" alt="">
+	        </div>
+	        <div class="modal-custom-description">
+	        	<h5 class="modal-txt modal-subtitle" id="deg-pos-title" > Diploma </h5>
+	        	<h5 class="modal-txt column-title"   id="deg-pos-content"> MASTER'S OF SCIENCE (ERASMUS MUNDUS)</h5>
+	        	<h5 class="modal-txt modal-subtitle" id="mod-date-title">Fecha de Grado</h5>
+	        	<h5 class="modal-txt column-title"   id="date-cont">AGOSTO 2017</h5>
+	        	<h5 class="modal-txt modal-subtitle" id="inst-title">Institución</h5>
+	        	<div id="inst-cont">		
+	        		<div class="fleft single-inst">
+	        			<img class="inst-img" src="images/logo-marihe.jpg" alt="">
+	        			<h5 class="descriptions inst-desc"><span>Donau Universit&aumlt</span><br><span>Krems, AT</span></h5>
+	        		</div>
+	        	</div>  
+	        	<h5 class="modal-txt modal-subtitle">Descripci&oacuten</h5>
+	        	<p> High mobility intercultural program covering management of higher education institutions from the perspectives of policy, research, governance, quality, funding, culture and society.
+	        	</p>
+	        </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
 	<script src="js/layouts/load_on_body.js"></script>
+	<script src="js/objects.js"></script>
+	<script src="js/index.js"></script>
 
 </body>
 </html>

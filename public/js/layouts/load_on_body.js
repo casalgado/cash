@@ -10,7 +10,6 @@ document.write('\
 	<script src="js/semantic/appear.js"></script>\
 	<script src="js/semantic/jquery.simple-text-rotator.min.js"></script>\
 	<script src="js/semantic/jqBootstrapValidation.js"></script>\
-	<script src="js/semantic/gmaps.js"></script>\
 	<script src="js/semantic/isotope.pkgd.min.js"></script>\
 	<script src="js/semantic/imagesloaded.pkgd.js"></script>\
 	<script src="js/semantic/jquery.flexslider-min.js"></script>\
